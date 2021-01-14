@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:weightSum="1"
+    >
+    <TextView
+        android:layout_weight="0.1"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:text="QR S/N Matching"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        />
+    <LinearLayout
+        android:layout_weight="0.8"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:weightSum="1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_weight="0.3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_barcode_product" />
+                <Button
+                    android:id="@+id/barCodeScan"
+                    android:textSize="24sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Barcode Scan"
+                    android:textColor="@color/black"
+                    android:layout_centerInParent="true"
+                    android:theme="@style/Theme.AppCompat.DayNight" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_weight="0.1"
+                android:id="@+id/resultBarCodeScan"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#0000FF"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"/>
+
+            <RelativeLayout
+                android:layout_weight="0.3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="13dp"
+                    android:src="@drawable/ic_qr_code" />
+                <Button
+                    android:id="@+id/qrCodeScan"
+                    android:textSize="24sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="Qr Scan"
+                    android:textColor="@color/black"
+                    android:theme="@style/Theme.AppCompat.DayNight" />
+            </RelativeLayout>
+            <TextView
+
+                android:layout_weight="0.15"
+                android:id="@+id/resultQrCodeScan"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#0000FF"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"/>
+            <TextView
+                android:layout_weight="0.12"
+                android:id="@+id/result"
+                android:gravity="center"
+                android:background="@drawable/rounded_corner"
+                android:textColor="@color/white"
+                android:layout_width="150dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:textSize="24sp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_weight="0.1"
+        android:textSize="24sp"
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:text="Clear"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"/>
+</LinearLayout>
